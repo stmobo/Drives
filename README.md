@@ -14,4 +14,4 @@ specialized to swerve (such as `lock()` and `driveAtAngle()`). Each "flavor" of
 swerve will have to implement the `SwerveDrive` interface.
 
 ## How to contribute
-See [the contribution  page](https://github.com/brandon-gong/Drives/blob/master/contribute.md).
+See [the contribution  page](contribute.md).
