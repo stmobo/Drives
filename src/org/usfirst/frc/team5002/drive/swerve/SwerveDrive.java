@@ -1,0 +1,35 @@
+package org.usfirst.frc.team5002.drive.swerve;
+
+import org.usfirst.frc.team5002.drive.Drive;
+
+/**
+ * The base interface for Swerve Drive.
+ * All swerve drive classes must implement this interface to be
+ * considered "swerve drive".
+ *
+ * This interface extends the
+ * {@link #org.usfirst.frc.team5002.drive.Drive Drive} interface and adds on
+ * extra methods specific to SwerveDrive.
+ *
+ * @author Brandon Gong
+ * Date: 9/9/17
+ */
+public interface SwerveDrive extends Drive {
+
+    /**
+     * Lock the base.  This turns all wheels into an X-formation.
+     */
+     public void lock();
+
+     /**
+      * Align all wheels at a certain angle relative to the robot.
+      * This call can be used right before {@code drive()} to drive at a certain
+      * angle.
+      *
+      * @param degrees Any integer between 0 and 360.  Implementations for this
+      * function should do a simple calculation to find the shortest path to
+      * reach the desired angle.
+      */
+      public void align(int degrees);
+
+}
