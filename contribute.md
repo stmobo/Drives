@@ -3,9 +3,9 @@
 All programmers on swerve team will be expected to make contributions.  We will
 be using the _fork-and-PR_ pattern to make sure only good code gets into the
 `master` branch.  Below is a quick overview on how to do this:
-1. Download and install ![git](https://git-scm.com/downloads).
+1. Download and install [git](https://git-scm.com/downloads).
 2. Get a text editor of your choice.  If you are new to Java,
-   I recommend you install ![Eclipse IDE](https://www.eclipse.org/downloads/).
+   I recommend you install [Eclipse IDE](https://www.eclipse.org/downloads/).
    It will show you errors in your code as you type.  Also, it has lots of other
    tools such as auto-format, advanced auto-complete, javadoc, and more.
 3. On GitHub, navigate to the Drives repo under the dragonrobotics organization.
