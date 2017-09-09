@@ -10,17 +10,19 @@ be using the _fork-and-PR_ pattern to make sure only good code gets into the
    tools such as auto-format, advanced auto-complete, javadoc, and more.
 3. On GitHub, navigate to the Drives repo under the dragonrobotics organization.
 4. In the upper-right section of the window, you will see three buttons:
-	* Watch/unwatch
-	* Star
-	* Fork
+    * Watch/unwatch
+    * Star
+    * Fork
 
    Click on "fork" and select your account. You now have your own copy of this
    repo to do whatever you want.
 5. On your fork, find the green button that says "Clone or download". Click on
    the dropdown and copy the link.
-6. In a terminal session on your computer (or on Git Bash if you are on windows),
+6. In a terminal session on your computer (or on Git Bash if you are on
+   windows),
    clone your fork; type in the command `git clone <url>` where `<url>` is that
-   link you copied earlier.  You should now have a folder named "Drives" created.
+   link you copied earlier.  You should now have a folder named "Drives"
+   created.
 7. Make whatever changes you want to make.  Create files, modify files, etc.
 8. Use `git status` to see which files you modified.
 9. Use `git add <files>` to add those modified files to your commit.
@@ -33,31 +35,35 @@ be using the _fork-and-PR_ pattern to make sure only good code gets into the
     credentials the first time.
 12. When you are done working on your task and you think it is ready to merge
     into the main repo, open a pull request.  But before you do this, here are a
-    few tips to make sure your code passes Code Review and makes it into the `master`
-    branch:
-    * Make sure the code is well-formatted.  In Eclipse, you can hit `Ctrl-Shift-F`
-      or `Cmd-Shift-F` (on a mac) to automatically format a file.  In Atom or Vim,
-      there are plugins to do this for you.  Or just do it manually.
-    * Make sure the code is well-commented.  Use javadoc-style comments for public
-      variables, classes, and public methods (google it).
-    * For each file or class, take credit for your changes.  You can use the `@author`
-      javadoc tag to mark classes as authored by you.
-    * Variable naming is important.  In most cases except counter variables, do not
-      name your variables and methods with single letters. But also don't name your
-      variable `anUneccessarilyExtraLongVariableNameThatIsAPainToTypeAndLookAt`.
-      Name classes in `PascalCase`, method/variable names in `camelCase`, and constant
-      names in `ALL_CAPS`.  If you can't get all this your first time around, just
-      go ahead and make the pull request.  We'll help you out there.
-13. To make the pull request, go to your fork on GitHub.  You will see a gray bar above your
-    files that says something like "This branch is x commits ahead of
-    dragonrobotics:master".  On the right side of that bar, you will see a button
-    that says "Pull Request". Click on that.
+    few tips to make sure your code passes Code Review and makes it into the
+    `master` branch:
+    * Make sure the code is well-formatted.  In Eclipse, you can hit
+      `Ctrl-Shift-F` or `Cmd-Shift-F` (on a mac) to automatically format a
+      file.  In Atom or Vim, there are plugins to do this for you.  Or just do
+      it manually.
+    * Make sure the code is well-commented.  Use javadoc-style comments for
+      public variables, classes, and public methods (google it).
+    * For each file or class, take credit for your changes.  You can use the
+      `@author` javadoc tag to mark classes as authored by you.
+    * Variable naming is important.  In most cases except counter variables, do
+      not name your variables and methods with single letters. But also don't
+      name your variable
+      `anUneccessarilyExtraLongVariableNameThatIsAPainToTypeAndLookAt`. Name
+      classes in `PascalCase`, method/variable names in `camelCase`, and
+      constant names in `ALL_CAPS`.  If you can't get all this your first time
+      around, just go ahead and make the pull request.  We'll help you out
+      there.
+13. To make the pull request, go to your fork on GitHub.  You will see a gray
+    bar above your files that says something like "This branch is x commits
+    ahead of dragonrobotics:master".  On the right side of that bar, you will
+    see a button that says "Pull Request". Click on that.
 14. Hopefully, you will see green text that says "Able to merge."  If you don't,
-    this is really bad, and get help on Slack. We will help you resolve your merge
-    conflicts.
+    this is really bad, and get help on Slack. We will help you resolve your
+    merge conflicts.
 15. Click on that green "Create pull request" button.
-16. In the box, type a description of your changes.  You can use Markdown syntax for this.
-    This means \_underlines around text\_ for _italic text_, \*asterisks around text\* for
-    *bold and emphasized text*, \~tildes\~ for ~strikethrough~, hyphens for lists, etc.
-    Or just use plain english if fancy is not your thing.
- 17. Click on the "Create pull request" button.  It's ready for code review.
+16. In the box, type a description of your changes.  You can use Markdown
+    syntax for this. This means \_underlines around text\_ for _italic text_,
+    \*\*double asterisks around text\*\* for **bold and emphasized text**,
+    \~tildes\~ for ~strikethrough~, hyphens for lists, etc. Or just use plain
+    text if fancy is not your thing.
+17. Click on the "Create pull request" button.  It's ready for code review.
