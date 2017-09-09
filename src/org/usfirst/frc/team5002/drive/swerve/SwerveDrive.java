@@ -19,7 +19,7 @@ public interface SwerveDrive extends Drive {
     /**
      * Lock the base.  This turns all wheels into an X-formation.
      */
-     public void lock();
+    public void lock();
 
      /**
       * Align all wheels at a certain angle relative to the robot.
@@ -30,6 +30,6 @@ public interface SwerveDrive extends Drive {
       * function should do a simple calculation to find the shortest path to
       * reach the desired angle.
       */
-      public void align(int degrees);
+     public void align(int degrees);
 
 }
