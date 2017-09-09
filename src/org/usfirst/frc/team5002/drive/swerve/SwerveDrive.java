@@ -31,4 +31,14 @@ public interface SwerveDrive extends Drive {
       */
      public void align(int degrees);
 
+     /**
+      * Set the twisting rate.  This means rotating robot chassis while
+      * continuing to drive in a straight line.
+      *
+      * @param rate The rate of twisting expressed as a percentage of maximum
+      *             twisting rate.  Should be between -1 and +1, with 0 being
+      *             no twisting at all.
+      */
+     public void setTwist(float rate);
+
 }

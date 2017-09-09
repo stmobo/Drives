@@ -39,8 +39,18 @@ public interface Drive {
      /**
       * Turn a certain distance at a given speed.
       * @param power See setTurn() above.
-      * @param degrees The number of degrees on the encoder to turn.
+      * @param degrees The number of degrees to turn the chassis based on
+      *                gyroscope data.
       */
      public void turnDistance(float power, int degrees);
+
+     /**
+      * Check whether all motors on the drivetrain are stopped or if there
+      * are still tasks being executed.
+      *
+      * @return {@code true} if the drive train is completely stopped,
+      *         {@code false} otherwise.
+      */
+      public boolean stopped();
 
 }
