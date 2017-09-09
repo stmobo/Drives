@@ -7,8 +7,7 @@ import org.usfirst.frc.team5002.drive.Drive;
  * All swerve drive classes must implement this interface to be
  * considered "swerve drive".
  *
- * This interface extends the
- * {@link #org.usfirst.frc.team5002.drive.Drive Drive} interface and adds on
+ * This interface extends the Drive interface and adds on
  * extra methods specific to SwerveDrive.
  *
  * @author Brandon Gong
