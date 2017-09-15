@@ -8,7 +8,7 @@ be using the _fork-and-PR_ pattern to make sure only good code gets into the
    I recommend you install [Eclipse IDE](https://www.eclipse.org/downloads/).
    It will show you errors in your code as you type.  Also, it has lots of other
    tools such as auto-format, advanced auto-complete, javadoc, and more.
-3. On GitHub, navigate to the Drives repo under the dragonrobotics organization.
+3. On GitHub, navigate to the Drives repo under [`brandon-gong`'s account](https://github.com/brandon-gong/Drives).
 4. In the upper-right section of the window, you will see three buttons:
     * Watch/unwatch
     * Star
