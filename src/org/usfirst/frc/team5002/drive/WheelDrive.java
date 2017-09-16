@@ -12,6 +12,8 @@ import org.usfirst.frc.team5002.drive.Drive;
 private Talon angleMotor;
 private Talon speedMotor;
 private PIDController pidController;
+public final double L = 24.69 ;
+public final double W = 22.61 ;
 
 public WheelDrive(int angleMotor, int speedMotor, int encoder){
   this.angleMotor = new Talon (angleMotor);
@@ -37,5 +39,20 @@ public void drive (double speed, double angle) {
   }
 
   pidController.setSetpoint (setpoint);
+
+}
+public void drive ( double x, double y, double z){
+  double r = Math.sqrt((L * L) + (W * W))
+  y *= -1;
+
+  double a = x-z * (L/r);
+  double b = x+z * (L/r);
+  double c = y-z * (W/r);
+  double d = y+z * (W/r);
+
+double backRightSpeed = Math.sqrt ((a * a) + (d * d));
+double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
+double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
+double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
 
 }
