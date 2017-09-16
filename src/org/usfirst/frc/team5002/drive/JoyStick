@@ -1,4 +1,4 @@
- class input {
+
     public final double L = ;
     public final double W = ;
     public void drive ( double x, double y, double z){
@@ -16,4 +16,4 @@
     double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
 
     }
- }
+ 
