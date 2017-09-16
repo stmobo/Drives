@@ -28,6 +28,7 @@ public interface SwerveDrive extends Drive {
       * @param degrees Any integer between 0 and 360.  Implementations for this
       * function should do a simple calculation to find the shortest path to
       * reach the desired angle.
+      * @deprecated Not sure if there's any purpose for this.
       */
      public void align(int degrees);
 
