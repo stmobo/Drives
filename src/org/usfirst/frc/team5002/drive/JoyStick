@@ -1,6 +1,6 @@
 
-    public final double L = ;
-    public final double W = ;
+    public final double L = 24.69 ;
+    public final double W = 22.61 ;
     public void drive ( double x, double y, double z){
       double r = Math.sqrt((L * L) + (W * W))
       y *= -1;
@@ -16,4 +16,3 @@
     double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
 
     }
- 
