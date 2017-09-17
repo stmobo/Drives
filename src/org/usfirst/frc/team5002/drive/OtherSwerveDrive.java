@@ -2,14 +2,13 @@
 +
 +import org.usfirst.frc.team5002.drive.Drive;
 
-private WheelDrive backRight;
-private WheelDrive backLeft;
-private WheelDrive frontRight;
-private WheelDrive frontLeft;
+private SwerveModule backRight;
+private SwerveModule backLeft;
+private SwerveModule frontRight;
+private SwerveModule frontLeft;
 
-public swerveDrive (WheelDrive backLeft, WheelDrive backRight, WheelDrive backLeft, WheelDrive backRight){
+public swerveDrive (SwerveModule backLeft, SwerveModule backRight, SwerveModule backLeft, SwerveModule backRight){
   this.backRight = backRight;
-  this.backLeft = backLeft;
   this.frontLeft = frontLeft;
   this.frontRight = frontRight;
 }

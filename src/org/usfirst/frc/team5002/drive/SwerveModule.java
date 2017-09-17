@@ -15,7 +15,7 @@ private PIDController pidController;
 public final double L = 24.69 ;
 public final double W = 22.61 ;
 
-public WheelDrive(int angleMotor, int speedMotor, int encoder){
+public SwerveModule(int angleMotor, int speedMotor, int encoder){
   this.angleMotor = new Talon (angleMotor);
   this.speedMotor = new Talon (speedMotor);
 
