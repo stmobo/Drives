@@ -15,7 +15,7 @@ private PIDController pidController;
 public final double L = 24.69 ;
 public final double W = 22.61 ;
 
-public SwerveModule(int angleMotor, int speedMotor, int encoder){
+public WheelDrive(int angleMotor, int speedMotor, int encoder){
   this.angleMotor = new Talon (angleMotor);
   this.speedMotor = new Talon (speedMotor);
 
@@ -54,4 +54,9 @@ public void drive( double x, double y, double z){
     double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
     double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
     double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
+
+    double backRightSpeed = Math.atan2 (a, d) / Math.pi;
+    double backLeftSpeed = Math.atan2 (a, c) / Math.pi;
+    double frontRightSpeed = Math.atan2 (b, d) / Math.pi;
+    double frontLeftSpeed = Math.atan2 (b, c) / Math.pi;
   }
