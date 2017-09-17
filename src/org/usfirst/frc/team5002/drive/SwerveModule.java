@@ -41,18 +41,17 @@ public void drive (double speed, double angle) {
   pidController.setSetpoint (setpoint);
 
 }
-public void drive ( double x, double y, double z){
-  double r = Math.sqrt((L * L) + (W * W))
-  y *= -1;
+public void drive( double x, double y, double z){
+    double r = Math.sqrt((L * L) + (W * W))
+    y *= -1;
 
-  double a = x-z * (L/r);
-  double b = x+z * (L/r);
-  double c = y-z * (W/r);
-  double d = y+z * (W/r);
+    double a = x-z * (L/r);
+    double b = x+z * (L/r);
+    double c = y-z * (W/r);
+    double d = y+z * (W/r);
 
-double backRightSpeed = Math.sqrt ((a * a) + (d * d));
-double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
-double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
-double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
-
-}
+    double backRightSpeed = Math.sqrt ((a * a) + (d * d));
+    double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
+    double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
+    double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
+  }
