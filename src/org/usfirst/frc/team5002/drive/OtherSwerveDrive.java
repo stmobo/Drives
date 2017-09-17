@@ -12,6 +12,11 @@ public swerveDrive (SwerveModule backLeft, SwerveModule backRight, SwerveModule 
     this.frontLeft = frontLeft;
     this.frontRight = frontRight;
 }
+  /* This is all the drive calculations for all the swerve modules
+    The X and Y are the forward/backward movements. The Z is the turning/axis.
+    R is the Hypotnuse, L is the length (a), W i sthe width (b).
+    The values for Y is between 1 & -1.
+  */
 public void drive( double x, double y, double z){
     double r = Math.sqrt((L * L) + (W * W))
     y *= -1;
@@ -21,13 +26,13 @@ public void drive( double x, double y, double z){
     double c = y-z * (W/r);
     double d = y+z * (W/r);
 
-    double backRightSpeed = Math.sqrt ((a * a) + (d * d));
-    double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
-    double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
-    double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
+    double backRightSd = Math.sqrt ((a * a) + (d * d));
+    double backLeftSd = Math.sqrt ((a * a) + (c * c));
+    double frontRightSd = Math.sqrt ((b * b) + (d * d));
+    double frontLeftSd = Math.sqrt ((b * b) + (c * c));
 
-    double backRightAngle = Math.atan2 (a, d) / Math.pi;
-    double backLeftAngle = Math.atan2 (a, c) / Math.pi;
-    double frontRightAngle = Math.atan2 (b, d) / Math.pi;
-    double frontLeftAngle = Math.atan2 (b, c) / Math.pi;
+    double backRightAng= Math.atan2 (a, d) / Math.pi;
+    double backLeftAng = Math.atan2 (a, c) / Math.pi;
+    double frontRightAng = Math.atan2 (b, d) / Math.pi;
+    double frontLeftAng = Math.atan2 (b, c) / Math.pi;
   }
