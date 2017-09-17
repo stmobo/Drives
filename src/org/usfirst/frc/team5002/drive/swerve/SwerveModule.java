@@ -9,35 +9,38 @@ import org.usfirst.frc.team5002.drive.Drive;
 
 
 */
-private Talon angleMotor;
-private Talon speedMotor;
-private PIDController pidController;
-public final double L = 24.69 ;
-public final double W = 22.61 ;
+  public class SwerveModule{
 
-public WheelDrive(int angleMotor, int speedMotor, int encoder){
-  this.angleMotor = new Talon (angleMotor);
-  this.speedMotor = new Talon (speedMotor);
+    private Talon angleMotor;
+    private Talon speedMotor;
+    private PIDController pidController;
+    public final double L = 24.69 ;
+    public final double W = 22.61 ;
 
-  pidController = new PIDController (1, 0, 0, new AnalogInput (encoder), this.angleMotor);
+  public WheelDrive(int angleMotor, int speedMotor, int encoder){
+    this.angleMotor = new Talon (angleMotor);
+    this.speedMotor = new Talon (speedMotor);
 
-  pidController.setOutputRange (-1, 1);
-  pidController.setContinuous ();
-  pidController.enable ();
+    pidController = new PIDController (1, 0, 0, new AnalogInput (encoder), this.angleMotor);
+
+    pidController.setOutputRange (-1, 1);
+    pidController.setContinuous ();
+    pidController.enable ();
 
   private final double MAX_VOLTS = 12;
-}
-public void drive (double speed, double angle) {
-  speedMotor.set (speed);
+  }
+  public void drive (double speed, double angle) {
+    speedMotor.set (speed);
 
-  double setpoint = angle * (MAX_VOLTS * 0.5) + (MAX_VOLTS * 0.5);
-  if(setpoint < 0){
+    double setpoint = angle * (MAX_VOLTS * 0.5) + (MAX_VOLTS * 0.5);
+    if(setpoint < 0){
       setpoint = MAX_VOLTS + setpoint;
-  }
-  if(setpoint > MAX_VOLTS){
-    setpoint = setpoint - MAX_VOLTS;
-  }
+    }
+    if(setpoint > MAX_VOLTS){
+      setpoint = setpoint - MAX_VOLTS;
+    }
 
-  pidController.setSetpoint (setpoint);
+    pidController.setSetpoint (setpoint);
 
+  }
 }
