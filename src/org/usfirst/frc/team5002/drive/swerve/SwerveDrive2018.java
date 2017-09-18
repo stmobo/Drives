@@ -24,7 +24,10 @@ public class SwerveDrive2018 {
     public final double L = 24.69;
     public final double W = 22.61;
 
-    public SwerveDrive2018(SwerveModule backLeft, SwerveModule backRight, SwerveModule backLeft, SwerveModule backRight) {
+    public SwerveDrive2018( SwerveModule backLeft,
+                            SwerveModule backRight,
+                            SwerveModule backLeft,
+                            SwerveModule backRight ) {
             this.backRight = backRight;
             this.frontLeft = frontLeft;
             this.frontRight = frontRight;
@@ -45,23 +48,20 @@ public class SwerveDrive2018 {
             double r = Math.sqrt((L * L) + (W * W));
             y *= -1;
 
-            // This is the intermediate variables
+            // intermediate vector components
             double a = x - z * (L / r);
             double b = x + z * (L / r);
             double c = y - z * (W / r);
             double d = y + z * (W / r);
 
             // This is the speed calculations for each wheel.
-            // Obviously, we are using the Pythagorean Theorem again.
             double brSpeed = Math.sqrt((a * a) + (d * d));
             double blSpeed = Math.sqrt((a * a) + (c * c));
             double frSpeed = Math.sqrt((b * b) + (d * d));
             double flSpeed = Math.sqrt((b * b) + (c * c));
 
-            /*
-             * This has to do with the Angle calculations for each wheel.
-             */
-            double brAng= Math.atan2 (a, d) / Math.pi;
+            // Angle calculations for each wheel.
+            double brAng = Math.atan2 (a, d) / Math.pi;
             double blAng = Math.atan2 (a, c) / Math.pi;
             double frAng = Math.atan2 (b, d) / Math.pi;
             double flAng = Math.atan2 (b, c) / Math.pi;
