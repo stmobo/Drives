@@ -9,7 +9,7 @@ import org.usfirst.frc.team5002.drive.Drive;
 
 
 */
-  public class SwerveModule{
+public class SwerveModule{
 
     private Talon angleMotor;
     private Talon speedMotor;
