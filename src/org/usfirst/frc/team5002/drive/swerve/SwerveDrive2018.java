@@ -42,7 +42,7 @@ public class SwerveDrive2018 {
      * The values for Y is between 1 & -1.
      */
     public void drive(double x, double y, double z) {
-            double r = Math.sqrt((L * L) + (W * W))
+            double r = Math.sqrt((L * L) + (W * W));
             y *= -1;
 
             // This is the intermediate variables
