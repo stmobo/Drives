@@ -13,15 +13,22 @@ import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
  * @author Brandon Gong
  * Date: 9/17/17
  */
-public class SwerveDrive2018 {
+public class SwerveDrive2018 implements SwerveDrive {
 
     private SwerveModule backRight;
     private SwerveModule backLeft;
     private SwerveModule frontRight;
     private SwerveModule frontLeft;
 
-    public final double L = 24.69;
-    public final double W = 22.61;
+    /**
+     * The length between the axles (unit does not matter).
+     */
+    public final double LENGTH = 24.69;
+
+    /**
+     * The width between the wheels on each axle.
+     */
+    public final double WIDTH = 22.61;
 
     public SwerveDrive2018( SwerveModule backLeft,
                             SwerveModule backRight,
@@ -36,23 +43,26 @@ public class SwerveDrive2018 {
     /**
      * This is all the drive calculations for all the swerve modules.
      *
+     * @param x Strafe (left-right movements)
+     * @param y Forward-backward movement
+     * @param z Twisting motion.
+     *
      * @author Nikitha Sam
      * Date: 09/17/2017
-     *
-     * The X and Y are the forward/backward movements. The Z is the
-     * turning/axis.
-     * R is the Hypotenuse, L is the length (a), W is the width (b).
-     * The values for Y is between 1 & -1.
      */
     public void drive(double x, double y, double z) {
-            double r = Math.sqrt((L * L) + (W * W));
+
+            // Calculate diagonal length.
+            double r = Math.sqrt((LENGTH * LENGTH) + (WIDTH * WIDTH));
+
+            // invert y-axis
             y *= -1;
 
             // intermediate vector components
-            double a = x - z * (L / r);
-            double b = x + z * (L / r);
-            double c = y - z * (W / r);
-            double d = y + z * (W / r);
+            double a = x - z * (LENGTH / r);
+            double b = x + z * (LENGTH / r);
+            double c = y - z * (WIDTH / r);
+            double d = y + z * (WIDTH / r);
 
             // This is the speed calculations for each wheel.
             double brSpeed = Math.sqrt((a * a) + (d * d));
@@ -61,9 +71,15 @@ public class SwerveDrive2018 {
             double flSpeed = Math.sqrt((b * b) + (c * c));
 
             // Angle calculations for each wheel.
-            double brAng = Math.atan2 (a, d) / Math.pi;
-            double blAng = Math.atan2 (a, c) / Math.pi;
-            double frAng = Math.atan2 (b, d) / Math.pi;
-            double flAng = Math.atan2 (b, c) / Math.pi;
+            double brAngle = Math.atan2(a, d) / Math.pi;
+            double blAngle = Math.atan2(a, c) / Math.pi;
+            double frAngle = Math.atan2(b, d) / Math.pi;
+            double flAngle = Math.atan2(b, c) / Math.pi;
+
+            // Assign calculated values to swerve modules.
+            this.backRight.drive(brSpeed, brAngle);
+            this.backLeft.drive(blSpeed, blAngle);
+            this.frontRight.drive(frSpeed, frAngle);
+            this.frontLeft.drive(flSpeed, flAngle);
     }
 }
