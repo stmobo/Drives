@@ -5,9 +5,10 @@ import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
 
 /**
  * This class manages all four swerve modules and does calculations for wheel
- * angle, wheel speed, etc.
+ * angle, wheel speed, etc. This class also implements SwerveDrive.
  *
- * TODO: Implement SwerveDrive interface.  Implement wpilib Command class.
+ *
+ * TODO:Implement wpilib Command class.
  *
  * @author Nikitha Sam
  * @author Brandon Gong
@@ -23,14 +24,17 @@ public class SwerveDrive2018 implements SwerveDrive {
     private float strafe;
     private float twist;
 
-    public void setDrive(float forward){
-      this.forward = forward;
-      this.drive(this.forward, this.strafe, this.twist);
-    }
+    // Sets setTurn and calls Drive (x)
     public void setTurn(float strafe){
       this.strafe = strafe;
       this.drive(this.forward, this.strafe, this.twist);
     }
+    // Sets setDrive and calls Drive (y)
+    public void setDrive(float forward){
+      this.forward = forward;
+      this.drive(this.forward, this.strafe, this.twist);
+    }
+    // Sets setTurn and calls Drive (z)
     public void setTwist(float twist){
       this.twist = twist;
       this.drive(this.forward, this.strafe, this.twist);
