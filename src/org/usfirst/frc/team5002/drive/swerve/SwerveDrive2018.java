@@ -23,12 +23,12 @@ public class SwerveDrive2018 implements SwerveDrive {
     /**
      * The length between the axles (unit does not matter).
      */
-    public final double LENGTH = 24.69;
+    private final double LENGTH = 24.69;
 
     /**
      * The width between the wheels on each axle.
      */
-    public final double WIDTH = 22.61;
+    private final double WIDTH = 22.61;
 
     public SwerveDrive2018( SwerveModule backLeft,
                             SwerveModule backRight,
@@ -50,19 +50,19 @@ public class SwerveDrive2018 implements SwerveDrive {
      * @author Nikitha Sam
      * Date: 09/17/2017
      */
-    public void drive(double x, double y, double z) {
+    private void drive(double x, double y, double z) {
 
             // Calculate diagonal length.
-            double r = Math.sqrt((LENGTH * LENGTH) + (WIDTH * WIDTH));
+            double r = Math.sqrt((this.LENGTH * this.LENGTH) + (this.WIDTH * this.WIDTH));
 
             // invert y-axis
             y *= -1;
 
             // intermediate vector components
-            double a = x - z * (LENGTH / r);
-            double b = x + z * (LENGTH / r);
-            double c = y - z * (WIDTH / r);
-            double d = y + z * (WIDTH / r);
+            double a = x - z * (this.LENGTH / r);
+            double b = x + z * (this.LENGTH / r);
+            double c = y - z * (this.WIDTH / r);
+            double d = y + z * (this.WIDTH / r);
 
             // This is the speed calculations for each wheel.
             double brSpeed = Math.sqrt((a * a) + (d * d));
