@@ -1,1 +1,1 @@
-javadoc -d docs -sourcepath src -supbackages org
+javadoc -d docs -sourcepath src -subpackages org
