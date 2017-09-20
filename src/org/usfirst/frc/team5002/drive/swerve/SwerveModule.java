@@ -11,15 +11,20 @@ import edu.wpi.first.wpilibj.PIDController;
  */
 public class SwerveModule {
 
+//  crreates instance variables for the Talons and pidController
     private Talon angleMotor;
     private Talon speedMotor;
     private PIDController pidController;
 
+//  Establishes the Max voltage the swerve motors can take
     private final double MAX_VOLTS = 12;
 
+//  says what a SwerveModule is
     public SwerveModule(int angleMotor, int speedMotor, int encoder) {
         this.angleMotor = new Talon(angleMotor);
         this.speedMotor = new Talon(speedMotor);
+
+// creates the pidController and says what it does
 
         pidController = new PIDController(1, 0, 0, new AnalogInput(encoder), this.angleMotor);
 
@@ -27,7 +32,7 @@ public class SwerveModule {
         pidController.setContinuous();
         pidController.enable();
     }
-
+// Does the math to decide where the wheel should point
     public void drive(double speed, double angle) {
 
         this.speedMotor.set(speed);
