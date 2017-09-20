@@ -24,17 +24,28 @@ public class SwerveDrive2018 implements SwerveDrive {
     private float strafe;
     private float twist;
 
-    // Sets setTurn and calls Drive (x)
+/**
+*  This sets setTurn (x/strafe), setDrive (y/forward), and setTwist (z/twist) and calls Drive after
+*  setiing.
+*
+* @param forward x/ the forwards and backward motion
+* @param strafe y/ the side to side motion
+* @param twist z/ turning and twisting
+*
+* @author Nikitha Sam
+* Date: 09/20/2017
+*/
+
     public void setTurn(float strafe){
       this.strafe = strafe;
       this.drive(this.forward, this.strafe, this.twist);
     }
-    // Sets setDrive and calls Drive (y)
+
     public void setDrive(float forward){
       this.forward = forward;
       this.drive(this.forward, this.strafe, this.twist);
     }
-    // Sets setTwist and calls Drive (z)
+
     public void setTwist(float twist){
       this.twist = twist;
       this.drive(this.forward, this.strafe, this.twist);
