@@ -25,15 +25,15 @@ public class SwerveDrive2018 implements SwerveDrive {
 
     public void setDrive(float forward){
       this.forward = forward;
-      forward.Drive();
+      this.drive(this.forward, this.strafe, this.twist);
     }
     public void setTurn(float strafe){
       this.strafe = strafe;
-      strafe.Drive();
+      this.drive(this.forward, this.strafe, this.twist);
     }
     public void setTwist(float twist){
       this.twist = twist;
-      twist.Drive();
+      this.drive(this.forward, this.strafe, this.twist);
     }
     /**
      * The length between the axles (unit does not matter).
