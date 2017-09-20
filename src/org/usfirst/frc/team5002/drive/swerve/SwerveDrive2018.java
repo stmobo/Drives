@@ -9,7 +9,6 @@ import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
  *
  * TODO: Implement SwerveDrive interface.  Implement wpilib Command class.
  *
- * @author Zack Vega
  * @author Nikitha Sam
  * @author Brandon Gong
  * Date: 9/17/17
@@ -26,9 +25,10 @@ public class SwerveDrive2018 {
 
     public SwerveDrive2018( SwerveModule backLeft,
                             SwerveModule backRight,
-                            SwerveModule backLeft,
-                            SwerveModule backRight ) {
+                            SwerveModule frontLeft,
+                            SwerveModule frontRight ) {
             this.backRight = backRight;
+            this.backLeft = backLeft;
             this.frontLeft = frontLeft;
             this.frontRight = frontRight;
     }
