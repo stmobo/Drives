@@ -23,15 +23,15 @@ public class SwerveDrive2018 implements SwerveDrive {
     private float strafe;
     private float twist;
 
-    public void setDrive(float forward){
+    public void setDrive(float forward) {
       this.forward = forward;
       this.drive(this.forward, this.strafe, this.twist);
     }
-    public void setTurn(float strafe){
+    public void setTurn(float strafe) {
       this.strafe = strafe;
       this.drive(this.forward, this.strafe, this.twist);
     }
-    public void setTwist(float twist){
+    public void setTwist(float twist) {
       this.twist = twist;
       this.drive(this.forward, this.strafe, this.twist);
     }
