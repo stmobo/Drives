@@ -19,7 +19,22 @@ public class SwerveDrive2018 implements SwerveDrive {
     private SwerveModule backLeft;
     private SwerveModule frontRight;
     private SwerveModule frontLeft;
+    private float forward;
+    private float strafe;
+    private float twist;
 
+    public void setDrive(float forward){
+      this.forward = forward;
+      forward.Drive();
+    }
+    public void setTurn(float strafe){
+      this.strafe = strafe;
+      strafe.Drive();
+    }
+    public void setTwist(float twist){
+      this.twist = twist;
+      twist.Drive();
+    }
     /**
      * The length between the axles (unit does not matter).
      */
