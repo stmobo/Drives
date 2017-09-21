@@ -28,9 +28,9 @@ public class SwerveDrive2018 implements SwerveDrive {
 *  This sets setTurn (x/strafe), setDrive (y/forward), and setTwist (z/twist) and calls Drive after
 *  setiing.
 *
-* @param forward x/ the forwards and backward motion
-* @param strafe y/ the side to side motion
-* @param twist z/ turning and twisting
+* @param forward the forwards and backward motion
+* @param strafe the side to side motion
+* @param twist turning and twisting
 *
 * @author Nikitha Sam
 * Date: 09/20/2017
