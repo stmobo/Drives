@@ -7,59 +7,42 @@ import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
  * This class manages all four swerve modules and does calculations for wheel
  * angle, wheel speed, etc. This class also implements SwerveDrive.
  *
- *
- * TODO:Implement wpilib Command class.
- *
  * @author Nikitha Sam
  * @author Brandon Gong
  * Date: 9/17/17
  */
 public class SwerveDrive2018 implements SwerveDrive {
 
+    /*
+     * Swerve Submodules.
+     */
     private SwerveModule backRight;
     private SwerveModule backLeft;
     private SwerveModule frontRight;
     private SwerveModule frontLeft;
+
+    /*
+     * Movement parameters.
+     */
     private float forward;
     private float strafe;
     private float twist;
 
-/**
-*  This sets setTurn (x/strafe), setDrive (y/forward), and setTwist (z/twist) and calls Drive after
-*  setiing.
-*
-* @param forward the forwards and backward motion
-* @param strafe the side to side motion
-* @param twist turning and twisting
-*
-* @author Nikitha Sam
-* Date: 09/20/2017
-*/
-
-    public void setTurn(float strafe){
-      this.strafe = strafe;
-      this.drive(this.forward, this.strafe, this.twist);
-    }
-
-    public void setDrive(float forward){
-      this.forward = forward;
-      this.drive(this.forward, this.strafe, this.twist);
-    }
-
-    public void setTwist(float twist){
-      this.twist = twist;
-      this.drive(this.forward, this.strafe, this.twist);
-    }
-    /**
-     * The length between the axles (unit does not matter).
+    /*
+     * Dimensions of base (axle-to-axle, wheel-to-wheel respectively).
      */
     private final double LENGTH = 24.69;
-
-    /**
-     * The width between the wheels on each axle.
-     */
     private final double WIDTH = 22.61;
 
+    /**
+     * Constructs a new SwerveDrive2018 instance with the given SwerveModule
+     * submodules.
+     *
+     * @param backLeft the back-left swerve module.
+     * @param backRight the back-right swerve module.
+     * @param frontLeft the front-left swerve module.
+     * @param frontRight the front-right swerve module.
+     */
     public SwerveDrive2018( SwerveModule backLeft,
                             SwerveModule backRight,
                             SwerveModule frontLeft,
@@ -68,6 +51,39 @@ public class SwerveDrive2018 implements SwerveDrive {
             this.backLeft = backLeft;
             this.frontLeft = frontLeft;
             this.frontRight = frontRight;
+    }
+
+    /**
+     * Sets the forward-and-backward, or y-axis, movement of the swerve base,
+     * and then recalculates wheel speeds and angles.
+     * @param forward the forwards and backward motion
+     * @author Nikitha Sam
+     */
+    public void setDrive(float forward) {
+      this.forward = forward;
+      this.drive(this.forward, this.strafe, this.twist);
+    }
+
+    /**
+     * Sets the strafe (right-to-left), or x-axis, movement of the swerve base,
+     * and then recalculates wheel speeds and angles.
+     * @param strafe the side to side motion
+     * @author Nikitha Sam
+     */
+    public void setTurn(float strafe) {
+      this.strafe = strafe;
+      this.drive(this.forward, this.strafe, this.twist);
+    }
+
+    /**
+     * Sets the twisting, or z axis, movement of the swerve base, and then
+     * recalculates wheel speeds and angles.
+     * @param twist turning and twisting
+     * @author Nikitha Sam
+     */
+    public void setTwist(float twist) {
+      this.twist = twist;
+      this.drive(this.forward, this.strafe, this.twist);
     }
 
     /**
