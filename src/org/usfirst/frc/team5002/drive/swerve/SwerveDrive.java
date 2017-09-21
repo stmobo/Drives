@@ -21,18 +21,6 @@ public interface SwerveDrive extends Drive {
     public void lock();
 
      /**
-      * Align all wheels at a certain angle relative to the robot.
-      * This call can be used right before {@code drive()} to drive at a certain
-      * angle.
-      *
-      * @param degrees Any integer between 0 and 360.  Implementations for this
-      * function should do a simple calculation to find the shortest path to
-      * reach the desired angle.
-      * @deprecated Not sure if there's any purpose for this.
-      */
-     public void align(int degrees);
-
-     /**
       * Set the twisting rate.  This means rotating robot chassis while
       * continuing to drive in a straight line.
       *
