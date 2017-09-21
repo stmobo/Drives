@@ -1,5 +1,7 @@
 package org.usfirst.frc.team5002.drive.swerve;
 
+import edu.wpi.first.wpilibj.command.Subsystem;
+
 import org.usfirst.frc.team5002.drive.swerve.SwerveDrive;
 import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
 
@@ -11,7 +13,7 @@ import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
  * @author Brandon Gong
  * Date: 9/17/17
  */
-public class SwerveDrive2018 implements SwerveDrive {
+public class SwerveDrive2018 extends Subsystem implements SwerveDrive {
 
     /*
      * Swerve Submodules.
@@ -128,4 +130,8 @@ public class SwerveDrive2018 implements SwerveDrive {
             this.frontRight.drive(frSpeed, frAngle);
             this.frontLeft.drive(flSpeed, flAngle);
     }
+
+    public void initDefaultCommand() {
+    }
+    
 }
