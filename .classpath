@@ -2,11 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/brandon/Downloads/wpilibJavaFinal-2016.5.1.jar"/>
 	<classpathentry kind="var" path="wpilib" sourcepath="wpilib.sources"/>
 	<classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
 	<classpathentry kind="var" path="opencv" sourcepath="opencv.sources"/>
 	<classpathentry kind="var" path="cscore" sourcepath="cscore.sources"/>
-	<classpathentry kind="lib" path="/home/brandon/wpilib/java/current/lib/CTRLib.jar"/>
+	<classpathentry kind="lib" path="/Users/NikithaSam/Downloads/wpilibJavaFinal-2016.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/NikithaSam/wpilib/java/current/lib/CTRLib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
