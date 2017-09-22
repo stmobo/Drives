@@ -17,7 +17,7 @@ import org.usfirst.frc.team5002.robot.commands.TeleOp;
  */
 public class Robot extends IterativeRobot {
 
-    public static SwerveDrive swervedrive;
+    public static SwerveDrive2018 swervedrive;
 
     @Override
     public void robotInit() {
@@ -26,23 +26,19 @@ public class Robot extends IterativeRobot {
         swervedrive = new SwerveDrive2018(
             new SwerveModule(
                 RobotMap.bl_drive,
-                RobotMap.bl_steer,
-                RobotMap.bl_encoder
+                RobotMap.bl_steer
             ),
             new SwerveModule(
                 RobotMap.br_drive,
-                RobotMap.br_steer,
-                RobotMap.br_encoder
+                RobotMap.br_steer
             ),
             new SwerveModule(
                 RobotMap.fl_drive,
-                RobotMap.fl_steer,
-                RobotMap.fl_encoder
+                RobotMap.fl_steer
             ),
             new SwerveModule(
                 RobotMap.fr_drive,
-                RobotMap.fr_steer,
-                RobotMap.fr_encoder
+                RobotMap.fr_steer
             )
         );
     }

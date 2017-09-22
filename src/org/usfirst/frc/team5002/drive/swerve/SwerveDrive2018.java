@@ -119,10 +119,10 @@ public class SwerveDrive2018 extends Subsystem implements SwerveDrive {
             double flSpeed = Math.sqrt((b * b) + (c * c));
 
             // Angle calculations for each wheel.
-            double brAngle = Math.atan2(a, d) / Math.pi;
-            double blAngle = Math.atan2(a, c) / Math.pi;
-            double frAngle = Math.atan2(b, d) / Math.pi;
-            double flAngle = Math.atan2(b, c) / Math.pi;
+            double brAngle = Math.atan2(a, d) / Math.PI;
+            double blAngle = Math.atan2(a, c) / Math.PI;
+            double frAngle = Math.atan2(b, d) / Math.PI;
+            double flAngle = Math.atan2(b, c) / Math.PI;
 
             // Assign calculated values to swerve modules.
             this.backRight.drive(brSpeed, brAngle);

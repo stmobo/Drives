@@ -2,6 +2,7 @@ package org.usfirst.frc.team5002.robot.commands;
 
 import org.usfirst.frc.team5002.robot.Robot;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Joystick;
 
 /**
@@ -24,7 +25,7 @@ public class TeleOp extends Command {
 
     // make sure we've created an instance of swerve drive already
     public TeleOp() {
-        requires(Robot.swervedrive);
+        requires((Subsystem) Robot.swervedrive);
     }
 
     /**
