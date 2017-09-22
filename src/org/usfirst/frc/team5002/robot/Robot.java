@@ -21,6 +21,8 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void robotInit() {
+
+        // create a new instance of SwerveDrive2018 based on the Robot map.
         swervedrive = new SwerveDrive2018(
             new SwerveModule(
                 RobotMap.bl_drive,

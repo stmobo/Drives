@@ -2,6 +2,7 @@ package org.usfirst.frc.team5002.drive.swerve;
 
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.PIDController;
+import edu.wpi.first.wpilibj.AnalogInput;
 
 /**
  * This tells what angle the Swerve motors should be pointing
@@ -28,7 +29,6 @@ public class SwerveModule {
         this.speedMotor = new Talon(speedMotor);
 
         //creates the pidController and says what it does
-
         pidController = new PIDController(1, 0, 0, new AnalogInput(encoder), this.angleMotor);
 
         pidController.setOutputRange(-1, 1);
@@ -36,11 +36,17 @@ public class SwerveModule {
         pidController.enable();
     }
 
+    /**
+     * Set the speed of the module.
+     */
     public void setSpeed(double speed) {
         this.speed = speed;
         this.drive(this.speed, this.angle);
     }
 
+    /**
+     * Set the angle of the module.
+     */
     public void setAngle(double angle) {
         this.angle = angle;
         this.drive(this.speed, this.angle);
