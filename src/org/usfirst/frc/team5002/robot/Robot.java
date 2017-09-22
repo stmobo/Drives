@@ -1,6 +1,7 @@
 package org.usfirst.frc.team5002.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Scheduler;
 import org.usfirst.frc.team5002.drive.swerve.SwerveDrive;
 import org.usfirst.frc.team5002.drive.swerve.SwerveDrive2018;
 import org.usfirst.frc.team5002.drive.swerve.SwerveModule;
@@ -57,10 +58,15 @@ public class Robot extends IterativeRobot {
     public void autonomousPeriodic() {}
 
     @Override
-    public void teleopInit() {}
+    public void teleopInit() {
+        TeleOp teleop = new TeleOp();
+        Scheduler.getInstance().add(teleop);
+    }
 
     @Override
-    public void teleopPeriodic() {}
+    public void teleopPeriodic() {
+        Scheduler.getInstance().run();
+    }
 
     @Override
     public void testPeriodic() {}

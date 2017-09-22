@@ -16,6 +16,9 @@ public class SwerveModule {
     private Talon speedMotor;
     private PIDController pidController;
 
+    private double angle;
+    private double speed;
+
     //Establishes the Max voltage the swerve motors can take
     private final double MAX_VOLTS = 12;
 
@@ -32,6 +35,17 @@ public class SwerveModule {
         pidController.setContinuous();
         pidController.enable();
     }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+        this.drive(this.speed, this.angle);
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+        this.drive(this.speed, this.angle);
+    }
+
     // Sets the values relating to where the wheel should point
     public void drive(double speed, double angle) {
 

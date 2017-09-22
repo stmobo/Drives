@@ -26,7 +26,7 @@ public interface Drive {
      * @param power See setSpeed() above.
      * @param degrees The number of degrees on the encoder to drive.
      */
-    public void driveDistance(float power, int degrees);
+    //public void driveDistance(float power, int degrees);
 
      /**
       * Set the turning speed.
@@ -42,7 +42,7 @@ public interface Drive {
       * @param degrees The number of degrees to turn the chassis based on
       *                gyroscope data.
       */
-     public void turnDistance(float power, int degrees);
+     //public void turnDistance(float power, int degrees);
 
      /**
       * Check whether all motors on the drivetrain are stopped or if there
@@ -51,6 +51,6 @@ public interface Drive {
       * @return {@code true} if the drive train is completely stopped,
       *         {@code false} otherwise.
       */
-      public boolean stopped();
+      //public boolean stopped();
 
 }

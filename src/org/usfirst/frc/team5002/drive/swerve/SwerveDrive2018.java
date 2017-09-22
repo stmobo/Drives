@@ -18,10 +18,10 @@ public class SwerveDrive2018 extends Subsystem implements SwerveDrive {
     /*
      * Swerve Submodules.
      */
-    private SwerveModule backRight;
-    private SwerveModule backLeft;
-    private SwerveModule frontRight;
-    private SwerveModule frontLeft;
+    public SwerveModule backRight;
+    public SwerveModule backLeft;
+    public SwerveModule frontRight;
+    public SwerveModule frontLeft;
 
     /*
      * Movement parameters.
@@ -98,7 +98,7 @@ public class SwerveDrive2018 extends Subsystem implements SwerveDrive {
      * @author Nikitha Sam
      * Date: 09/17/2017
      */
-    private void drive(double x, double y, double z) {
+    public void drive(double x, double y, double z) {
 
             // Calculate diagonal length.
             double r = Math.sqrt((this.LENGTH * this.LENGTH) + (this.WIDTH * this.WIDTH));
@@ -131,7 +131,14 @@ public class SwerveDrive2018 extends Subsystem implements SwerveDrive {
             this.frontLeft.drive(flSpeed, flAngle);
     }
 
+    public void lock() {
+        this.frontRight.setAngle(0.785398);
+        this.backRight.setAngle(2.35619);
+        this.backLeft.setAngle(3.92699);
+        this.frontLeft.setAngle(5.49779);
+    }
+
     public void initDefaultCommand() {
     }
-    
+
 }
