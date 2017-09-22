@@ -13,5 +13,3 @@ will be created, extending the `Drive` interface and adding on extra methods
 specialized to swerve (such as `lock()` and `align()`). Each "flavor" of
 swerve will have to implement the `SwerveDrive` interface.
 
-## How to contribute
-See [the contribution  page](contribute.md).
